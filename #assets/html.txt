@@ -1,0 +1,23 @@
+    <div class="todoApp">
+      <form action="" class="todoApp__form">
+        <input
+          type="text"
+          class="todoApp__form__input todoApp__form__input--error"
+          autofocus
+          placeholder="Enter an activity.."
+        />
+        <a href="#" class="todoApp__form__button"></a>
+      </form>
+      <ul class="todoApp__list">
+	<li class="todoApp__list__item todoApp__list__item--checked">
+                              <span class="text">Clean my car</span>
+                              <a href="#" class="icon icon--remove">%%YOUR_SVG_ICON%%</a>
+                              <a href="#" class="icon icon--check">%%YOUR_SVG_ICON%%</a>
+              </li>
+	<li class="todoApp__list__item todoApp__list__item--checked">
+                              <span class="text">Clean my car</span>
+                              <a href="#" class="icon icon--remove">%%YOUR_SVG_ICON%%</a>
+                              <a href="#" class="icon icon--check">%%YOUR_SVG_ICON%%</a>
+              </li>
+       </ul>
+    </div>

@@ -1,0 +1,16 @@
+inputfield & todo-texts
+---------------------------
+
+	google font Roboto
+	font-size: 16px
+	bgc: rgba(255, 255, 255, 0.3);
+
+colors
+---------
+$black: #000;
+$white: #fff;
+$green: #19ba99;
+$grey: #cbd5d2;
+$bodybg: #eef3f6;
+
+	
