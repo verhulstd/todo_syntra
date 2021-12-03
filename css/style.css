@@ -181,4 +181,31 @@ body {
   background-color: #eef3f6;
 }
 
+main {
+  width: 90%;
+  margin: 20px auto;
+  max-width: 550px;
+}
+
+.form {
+  background-color: #19ba99;
+  border-radius: 10px;
+  min-height: 75px;
+  margin-bottom: 20px;
+}
+.form input,
+.form button {
+  display: none;
+}
+
+.list__item {
+  min-height: 20px;
+  background-color: #fff;
+  margin-bottom: 12px;
+}
+.list__item span,
+.list__item button {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

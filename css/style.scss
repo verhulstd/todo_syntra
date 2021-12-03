@@ -8,3 +8,31 @@
 body {
   background-color: $bodybg;
 }
+
+main {
+  width: 90%;
+  margin: 20px auto;
+  max-width: 550px;
+}
+.form {
+  background-color: $green;
+  border-radius: 10px;
+  min-height: 75px;
+  margin-bottom: 20px;
+  input,
+  button {
+    display: none;
+  }
+}
+
+.list {
+  &__item {
+    min-height: 20px;
+    background-color: $white;
+    margin-bottom: 12px;
+    span,
+    button {
+      display: none;
+    }
+  }
+}
