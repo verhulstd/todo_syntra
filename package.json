@@ -6,7 +6,8 @@
   "scripts": {
     "css:prod": "sass ./css/style.scss ./css/style.css --style compressed --no-source-map",
     "css:dev": "sass ./css/style.scss ./css/style.css -w",
-    "deploy": "surge ./ --domain https://todo-list-syntra.surge.sh"
+    "deploy": "surge ./ --domain https://todo-list-syntra.surge.sh",
+    "dogit": "git add . && git commit -m \"my next update\" && git push"
   },
   "repository": {
     "type": "git",

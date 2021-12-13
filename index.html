@@ -9,22 +9,25 @@
   </head>
   <body>
     <main>
-      <form action="" class="form" spellcheck="false">
+      <form
+        action="test.php"
+        method="POST"
+        id="form"
+        class="form"
+        spellcheck="false"
+      >
         <input
           type="text"
           name=""
-          id=""
+          id="field"
           placeholder="Type a new todo eg.: Cleaning car"
           class="form__input"
         />
-        <button class="form__submit"></button>
+        <button type="submit" class="form__submit"></button>
       </form>
-      <ul class="list">
-        <li class="list__item list__item--checked">
-          <span class="list__item__text"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            ab. !</span
-          >
+      <ul class="list" id="list">
+        <!-- <li class="list__item list__item--checked">
+          <span class="list__item__text">Gras afrijden</span>
           <button
             class="list__item__button list__item__button--remove"
           ></button>
@@ -38,13 +41,14 @@
           <button class="list__item__button list__item__button--check"></button>
         </li>
         <li class="list__item list__item--checked">
-          <span class="list__item__text">Les geven</span>
+          <span class="list__item__text">Nog iets doen</span>
           <button
             class="list__item__button list__item__button--remove"
           ></button>
           <button class="list__item__button list__item__button--check"></button>
-        </li>
+        </li> -->
       </ul>
     </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>
