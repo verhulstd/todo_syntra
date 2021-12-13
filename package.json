@@ -1,0 +1,22 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:prod": "sass ./css/style.scss ./css/style.css --style compressed --no-source-map",
+    "css:dev": "sass ./css/style.scss ./css/style.css -w",
+    "deploy": "surge ./ --domain https://todo-list-syntra.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verhulstd/todo_syntra.git"
+  },
+  "keywords": [],
+  "author": "David Verhulst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verhulstd/todo_syntra/issues"
+  },
+  "homepage": "https://github.com/verhulstd/todo_syntra#readme"
+}

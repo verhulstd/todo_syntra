@@ -177,6 +177,10 @@ table {
   content: "\e001";
 }
 
+::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 body {
   background-color: #eef3f6;
 }
@@ -190,22 +194,107 @@ main {
 .form {
   background-color: #19ba99;
   border-radius: 10px;
-  min-height: 75px;
   margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
 }
-.form input,
-.form button {
-  display: none;
+.form__input {
+  height: 65px;
+  background-color: #65c4ae;
+  border-width: 0px;
+  border-radius: 7px 0 0 7px;
+  outline: none;
+  padding-left: 25px;
+  padding-right: 57.5px;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  width: calc(100% - 32.5px);
+}
+.form__submit {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #61b1a0;
+  cursor: pointer;
+}
+.form__submit:before {
+  content: "\e000";
+  font-family: icons;
+  font-size: 28px;
+  color: #19ba99;
+}
+.form--error .form__input {
+  background-color: #f17477;
+}
+.form--error .form__submit {
+  cursor: not-allowed;
+}
+.form--error .form__submit:before {
+  color: #f17477;
 }
 
-.list__item {
-  min-height: 20px;
-  background-color: #fff;
-  margin-bottom: 12px;
+.list {
+  padding: 0 18px;
 }
-.list__item span,
-.list__item button {
-  display: none;
+.list__item {
+  background-color: #fff;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  padding: 13px 18px;
+  display: flex;
+  gap: 33px;
+  align-items: center;
+}
+.list__item__text {
+  margin-right: auto;
+  text-align: left;
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+}
+.list__item__button {
+  font-size: 32px;
+  color: #19ba99;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 300ms;
+  position: relative;
+}
+.list__item__button:hover {
+  opacity: 1;
+}
+.list__item__button:after {
+  font-family: icons;
+}
+.list__item__button--remove:after {
+  content: "\e001";
+}
+.list__item__button--check:after {
+  content: "\e002";
+}
+.list__item__button:not(:last-child):before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 0;
+  height: 40px;
+  width: 1px;
+  background-color: #cbd5d2;
+}
+.list__item--checked .list__item__text {
+  text-decoration: line-through;
+}
+.list__item--checked .list__item__button--check:after {
+  content: "\e003";
 }
 
 /*# sourceMappingURL=style.css.map */

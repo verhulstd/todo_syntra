@@ -1,9 +1,13 @@
 @use "./base/reset";
 @use "./base/extends";
-@use "./base/fonts";
-@use "./base/mixins" as *;
 @use "./base/variables" as *;
+@use "./base/fonts" as *;
+@use "./base/mixins" as *;
 @use "./icons/icons";
+
+::placeholder {
+  color: rgba($white, 0.4);
+}
 
 body {
   background-color: $bodybg;
@@ -17,22 +21,108 @@ main {
 .form {
   background-color: $green;
   border-radius: 10px;
-  min-height: 75px;
   margin-bottom: 20px;
-  input,
-  button {
-    display: none;
+  padding: 20px;
+  position: relative;
+  &__input {
+    height: 65px;
+    background-color: $lightgreen;
+    border-width: 0px;
+    border-radius: 7px 0 0 7px;
+    outline: none;
+    padding-left: 25px;
+    padding-right: 57.5px;
+    @include font;
+    width: calc(100% - 32.5px);
+  }
+  &__submit {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 1px solid $greenborder;
+    cursor: pointer;
+    &:before {
+      content: "\e000";
+      font-family: icons;
+      font-size: 28px;
+      color: $green;
+    }
+  }
+  &--error {
+    .form__input {
+      background-color: $red;
+    }
+    .form__submit {
+      cursor: not-allowed;
+    }
+    .form__submit:before {
+      color: $red;
+    }
   }
 }
 
 .list {
+  padding: 0 18px;
   &__item {
-    min-height: 20px;
     background-color: $white;
+    border-radius: 7px;
     margin-bottom: 12px;
-    span,
-    button {
-      display: none;
+    padding: 13px 18px;
+    display: flex;
+    gap: 33px;
+    align-items: center;
+    &__text {
+      margin-right: auto;
+      text-align: left;
+      @include font(18px, 22px, $black);
+    }
+    &__button {
+      font-size: 32px;
+      color: $green;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      opacity: 0.65;
+      transition: opacity 300ms;
+      position: relative;
+      &:hover {
+        opacity: 1;
+      }
+      &:after {
+        // content: "\e000";
+        font-family: icons;
+      }
+      &--remove {
+        &:after {
+          content: "\e001";
+        }
+      }
+      &--check {
+        &:after {
+          content: "\e002";
+        }
+      }
+      &:not(:last-child):before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        top: 0;
+        height: 40px;
+        width: 1px;
+        background-color: $grey;
+      }
+    }
+    &--checked {
+      .list__item__text {
+        text-decoration: line-through;
+      }
+      .list__item__button--check:after {
+        content: "\e003";
+      }
     }
   }
 }

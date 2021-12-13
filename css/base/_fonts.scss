@@ -1,1 +1,9 @@
+@use "./variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@mixin font($fs: 20px, $lh: 20px, $c: $white) {
+  font-family: "Roboto";
+  font-size: $fs;
+  line-height: $lh;
+  color: $c;
+}
